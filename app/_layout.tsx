@@ -65,23 +65,6 @@ export default function RootLayout() {
             title: 'Configurações',
           }}
         />
-
-        {/* Telas ocultas do Drawer, mas acessíveis via navegação programática */}
-
-        <Drawer.Screen
-          name="operator/history"
-          options={{
-            title: 'Histórico de Leituras',
-            drawerItemStyle: { display: 'none' },
-          }}
-        />
-        <Drawer.Screen
-          name="operator/index"
-          options={{
-            title: 'Painel do Responsável',
-            drawerItemStyle: { display: 'none' },
-          }}
-        />
       </Drawer>
     </>
   );
