@@ -20,7 +20,7 @@ export default function RootLayout() {
           name="welcome"
           options={{
             drawerLabel: '👋 Boas-vindas',
-            title: 'Tela de Boas-vindas',
+            title: 'Boas-vindas a FloodWatch',
           }}
         />
         <Drawer.Screen

@@ -11,7 +11,7 @@ export default function WelcomeScreen() {
         <Button
           title="Entrar"
           color="#1E90FF"
-          onPress={() => router.push('/')}
+          onPress={() => router.push('/login')}
         />
       </View>
       <View style={styles.buttonContainer}>
@@ -30,12 +30,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F0F8FF', // azul bem claro
+    backgroundColor: '#F0F8FF',
     padding: 20,
   },
   title: {
     fontSize: 24,
-    color: '#1E90FF', // azul forte
+    color: '#1E90FF',
     marginBottom: 40,
     fontWeight: 'bold',
   },
