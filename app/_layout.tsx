@@ -21,6 +21,7 @@ export default function RootLayout() {
           options={{
             drawerLabel: '👋 Boas-vindas',
             title: 'Boas-vindas a FloodWatch',
+            drawerItemStyle: {display: 'none'}
           }}
         />
         <Drawer.Screen
@@ -63,6 +64,20 @@ export default function RootLayout() {
           options={{
             drawerLabel: '⚙️ Perfil',
             title: 'Configurações',
+          }}
+        />
+        <Drawer.Screen
+          name="register"
+          options={{
+            drawerItemStyle: {display: 'none'},
+            title: 'Faça seu Cadastro',
+          }}
+        />
+        <Drawer.Screen
+          name="login"
+          options={{
+            drawerItemStyle: {display: 'none'},
+            title: 'Faça seu Login',
           }}
         />
       </Drawer>
