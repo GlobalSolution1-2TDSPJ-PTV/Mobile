@@ -17,7 +17,7 @@ O projeto foi construído com foco em fornecer soluções para **monitoramento d
 - **Mapa (`/map`)**: mostra as zonas de risco em um mapa interativo com marcadores coloridos conforme o nível de risco.  
 - **Envio de SOS (`/sos`)**: permite que o usuário envie um pedido de socorro compartilhando sua localização atual.  
 - **Abrigos (`/shelters`)**: lista abrigos disponíveis e informações úteis para quem precisa se deslocar para áreas seguras.  
-- **Perfil (`/profile`)**: gerenciamento de configurações e opção de sair do aplicativo.  
+- **Perfil (`/profile`)**: gerenciamento de configurações da conta logada.  
 - **Navegação (`_layout.tsx`)**: configuração da navegação entre telas utilizando o **Expo Router**.
 
 ## 🛠️ Tecnologias Utilizadas
@@ -31,8 +31,7 @@ O projeto foi construído com foco em fornecer soluções para **monitoramento d
 ## 📦 Instalação
 
 ```bash
-git clone https://github.com/SeuRepositorio/FloodWatch.git
-cd FloodWatch
+git clone https://github.com/GlobalSolution1-2TDSPJ-PTV/Mobile.git
 
 npm install
 ```
