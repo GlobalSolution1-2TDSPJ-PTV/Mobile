@@ -24,7 +24,7 @@ export default function RootLayout() {
           <Drawer.Screen name="alerts" options={{ drawerLabel: '🚨 Alertas', title: 'Alertas de Enchente' }} />
           <Drawer.Screen name="map" options={{ drawerLabel: '🗺️ Mapa', title: 'Zonas de Risco' }} />
           <Drawer.Screen name="shelters" options={{ drawerLabel: '🏕️ Abrigos', title: 'Abrigos Disponíveis' }} />
-          <Drawer.Screen name="profile" options={{ drawerLabel: '⚙️ Perfil', title: 'Configurações' }} />
+          <Drawer.Screen name="profile" options={{ drawerLabel: '⚙️ Configurações', title: 'Configurações' }} />
           <Drawer.Screen name="register" options={{ drawerItemStyle: { display: 'none' }, title: 'Faça seu Cadastro' }} />
           <Drawer.Screen name="login" options={{ drawerItemStyle: { display: 'none' }, title: 'Faça seu Login' }} />
         </Drawer>

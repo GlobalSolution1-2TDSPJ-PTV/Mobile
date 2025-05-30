@@ -9,6 +9,7 @@ type AuthContextType = {
   user: User | null;
   register: (email: string, senha: string) => void;
   login: (email: string, senha: string) => boolean;
+  logout: () => void;  
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -25,8 +26,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return user.email === email && user.senha === senha;
   };
 
+  const logout = () => {
+    setUser(null);
+  };
+
   return (
-    <AuthContext.Provider value={{ user, register, login }}>
+    <AuthContext.Provider value={{ user, register, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
