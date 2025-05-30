@@ -13,7 +13,7 @@ O projeto foi construído com foco em fornecer soluções para **monitoramento d
 ## 📱 Funcionalidades do App
 
 - **Tela de Boas-Vindas (`/welcome`)**: ponto de entrada do aplicativo, introduz o usuário à plataforma FloodWatch.  
-- **Dashboard (`/home`)**: status geral da cidade, com acesso rápido a outras funcionalidades.  
+- **Dashboard (`/index`)**: status geral da cidade, com acesso rápido a outras funcionalidades.  
 - **Alertas (`/alerts`)**: exibe áreas com risco de enchente e informações detalhadas.  
 - **Mapa (`/map`)**: mostra as zonas de risco em um mapa interativo com marcadores coloridos conforme o nível de risco.  
 - **Envio de SOS (`/sos`)**: permite que o usuário envie um pedido de socorro compartilhando sua localização atual.  
