@@ -1,8 +1,6 @@
 # 🌊 FloodWatch - Aplicativo Mobile de Alerta de Enchentes
 
-<div align="center">
   <img src="https://github.com/GlobalSolution1-2TDSPJ-PTV/Mobile/blob/main/assets/IconFlood.png?raw=true" width="120"/>
-</div>
 
 Este é um aplicativo mobile desenvolvido com **React Native** utilizando o framework **Expo**.  
 O projeto foi construído com foco em fornecer soluções para **monitoramento de enchentes**, visando funcionalidades como alerta em tempo real, exibição de áreas de risco em mapas, envio de SOS e listagem de abrigos disponíveis.
