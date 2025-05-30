@@ -1,5 +1,8 @@
-
 # 🌊 FloodWatch - Aplicativo Mobile de Alerta de Enchentes
+
+<div align="center">
+  <img src="https://github.com/GlobalSolution1-2TDSPJ-PTV/Mobile/blob/main/assets/IconFlood.png?raw=true" width="120"/>
+</div>
 
 Este é um aplicativo mobile desenvolvido com **React Native** utilizando o framework **Expo**.  
 O projeto foi construído com foco em fornecer soluções para **monitoramento de enchentes**, visando funcionalidades como alerta em tempo real, exibição de áreas de risco em mapas, envio de SOS e listagem de abrigos disponíveis.
@@ -53,7 +56,7 @@ Abra o app no seu dispositivo físico com o **Expo Go** ou emulador.
 ## ✅ Pré-requisitos
 
 - Node.js instalado  
-- Expo CLI instalado globalmente (`npm install -g expo-cli`)  
+- Expo CLI instalado globalmente (`npm install -g expo-cli`)  <-- ainda não projetado, ao final do app.
 - Conta Expo para testar no app Expo Go  
 - Dispositivo ou emulador com acesso à localização (para funcionalidades de mapa e SOS)
 
@@ -62,5 +65,4 @@ Abra o app no seu dispositivo físico com o **Expo Go** ou emulador.
 - **Mapa interativo** com marcadores coloridos conforme o nível de risco.  
 - **Envio de SOS** com compartilhamento de localização.  
 - **Listagem de abrigos** e pontos seguros.  
-- **Dashboard informativo** sobre status da cidade.  
-
+- **Dashboard informativo** sobre status da cidade.
