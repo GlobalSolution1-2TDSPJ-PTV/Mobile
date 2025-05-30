@@ -31,8 +31,7 @@ O projeto foi construído com foco em fornecer soluções para **monitoramento d
 ## 📦 Instalação
 
 ```bash
-git clone https://github.com/SeuRepositorio/FloodWatch.git
-cd FloodWatch
+git clone https://github.com/GlobalSolution1-2TDSPJ-PTV/Mobile.git
 
 npm install
 ```
