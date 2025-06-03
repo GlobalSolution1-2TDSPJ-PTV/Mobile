@@ -19,7 +19,7 @@ export default function RootLayout() {
           }}
         >
           <Drawer.Screen name="welcome" options={{ drawerLabel: '👋 Boas-vindas', title: 'Boas-vindas a FloodWatch', drawerItemStyle: { display: 'none' } }} />
-          <Drawer.Screen name="index" options={{ drawerLabel: '🏠 Dashboard', title: 'Dashboard' }} />
+          <Drawer.Screen name="home" options={{ drawerLabel: '🏠 Dashboard', title: 'Dashboard' }} />
           <Drawer.Screen name="sos" options={{ drawerLabel: '🆘 SOS', title: 'Envio de SOS' }} />
           <Drawer.Screen name="alerts" options={{ drawerLabel: '🚨 Alertas', title: 'Alertas de Enchente' }} />
           <Drawer.Screen name="map" options={{ drawerLabel: '🗺️ Mapa', title: 'Zonas de Risco' }} />
