@@ -18,7 +18,7 @@ export default function WelcomeScreen() {
         <Button
           title="Continuar como visitante"
           color="#4682B4"
-          onPress={() => router.push('/')}
+          onPress={() => router.push('/home')}
         />
       </View>
     </View>
