@@ -1,6 +1,17 @@
+import axios from 'axios';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
+import getApiUrl from '../utils/api';
+import { useEffect, useState } from 'react';
 
-const floodAlerts = [
+interface FloodAlert {
+  id: string;
+  area: string;
+  riskLevel: 'Baixo' | 'Médio' | 'Alto'; // pode ajustar conforme seu backend
+  status: string;
+  updatedAt: string;
+}
+
+const floodAlerts : FloodAlert[] = [
   {
     id: '1',
     area: 'Centro',
@@ -25,12 +36,38 @@ const floodAlerts = [
 ];
 
 export default function AlertsScreen() {
+ 
+    const [alerts, setAlerts] = useState<FloodAlert[]>(floodAlerts);
+
+    useEffect(() => {
+  const fetchAlerts = async () => {
+    try {
+      const response = await axios.get<any[]>(`${getApiUrl()}/api/alertas`);
+
+      const adaptedData: FloodAlert[] = response.data.map(alert => ({
+        id: alert.id,
+        area: alert.tipo || 'Área desconhecida',
+        riskLevel: alert.nivel,
+        status: alert.mensagem,
+        updatedAt: alert.atualizadoEm || new Date().toISOString(),
+      }));
+
+      setAlerts(adaptedData);
+    } catch (error) {
+      console.error('Erro ao buscar alertas:', error);
+    }
+  };
+
+  fetchAlerts();
+}, []);
+
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Alertas de Enchente</Text>
 
       <FlatList
-        data={floodAlerts}
+        data={alerts}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <View style={styles.card}>
