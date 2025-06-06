@@ -2,6 +2,8 @@ import { View, Text, Button, StyleSheet, TextInput, Alert } from 'react-native';
 import { useState } from 'react';
 import { useRouter } from 'expo-router';
 import { useAuth } from '../context/AuthContext';
+import getApiUrl from '../utils/api';
+import axios from 'axios';
 
 export default function ProfileScreen() {
   const { user, logout } = useAuth();
@@ -16,26 +18,31 @@ export default function ProfileScreen() {
     router.push('/welcome');
   };
 
-  const handleChangePassword = () => {
-    if (!user) return;
+  const handleChangePassword = async () => {
+  if (!user) return;
 
-    if (oldPassword !== user.senha) {
-      Alert.alert('Erro', 'Senha antiga incorreta.');
-      return;
-    }
+  if (newPassword !== confirmPassword) {
+    Alert.alert('Erro', 'As novas senhas não coincidem.');
+    return;
+  }
 
-    if (newPassword !== confirmPassword) {
-      Alert.alert('Erro', 'As novas senhas não coincidem.');
-      return;
-    }
+  try {
+    await axios.patch(
+      `${getApiUrl()}/api/usuarios/senha`,
+      {
+        novaSenha: newPassword
+      }
+    );
 
-    // Simulação de atualização da senha
-    user.senha = newPassword;
-    Alert.alert('Sucesso', 'Senha atualizada!');
-    setOldPassword('');
-    setNewPassword('');
-    setConfirmPassword('');
-  };
+    Alert.alert('Sucesso', 'Senha atualizada! Faça login novamente.');
+    logout();
+    router.replace('/login');
+  } catch (error) {
+    console.error(error);
+    Alert.alert('Erro', 'Não foi possível atualizar a senha.');
+  }
+};
+
 
   return (
     <View style={styles.container}>
