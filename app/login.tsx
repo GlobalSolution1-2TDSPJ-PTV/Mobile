@@ -10,12 +10,20 @@ export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
-  const handleLogin = () => {
-    if (login(email, senha)) {
-      Alert.alert('Sucesso', 'Login realizado!');
-      router.replace('/');
-    } else {
-      Alert.alert('Erro', 'Email ou senha incorretos');
+  const handleLogin = async () => {
+    if (!email || !senha) {
+      Alert.alert('Erro', 'Por favor, preencha todos os campos');
+      return;
+    }
+
+    
+    try {
+      await login(email, senha);
+      Alert.alert('Sucesso', 'Login realizado com sucesso!');
+      router.push('/home');
+    } catch (error) {
+      console.error(error);
+      Alert.alert('Erro', 'Email ou senha inválidos');
     }
   };
 
