@@ -3,6 +3,7 @@
     "name": "Mobile",
     "slug": "Mobile",
     "version": "1.0.0",
+    "scheme": "Mobile",
     "orientation": "portrait",
     "icon": "./assets/IconFlood.png",
     "userInterfaceStyle": "light",
