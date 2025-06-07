@@ -64,3 +64,7 @@ Abra o app no seu dispositivo físico com o **Expo Go** ou emulador.
 - **Envio de SOS** com compartilhamento de localização.  
 - **Listagem de abrigos** e pontos seguros.  
 - **Dashboard informativo** sobre status da cidade.
+
+## LINK DO VIDEO
+
+- https://youtu.be/NWW7-QHc2mc
